@@ -1,0 +1,27 @@
+html
+    head
+        title SB Tickets
+        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
+        link(rel="stylesheet", href="/assets/style.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css")
+        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js")
+        meta(charset="utf-8")
+    body.text-dark
+        nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+            div.container
+                a.navbar-brand(href="/")
+                    h2 SB Tickets
+                button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
+                    span.navbar-toggler-icon
+                div.collapse.navbar-collapse#navbarNav
+                    ul.navbar-nav.ml-auto
+                        li.nav-item
+                            a.nav-link(href="/") Home
+                        li.nav-item
+                            a.nav-link(href="/new") Nuevo ticket
+        div.container#content
+            br
+            block content
+        footer
+            div.p-3.text-center.bg-dark.text-light
+                span SB Tickets recibe su nombre por ser muy básico, So Basic Tickets. Creado con fines educativos.

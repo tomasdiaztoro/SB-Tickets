@@ -1,0 +1,15 @@
+extends ./layout.pug
+block content
+    h2 Nuevo ticket
+    hr
+    div.row
+        div.col-6
+            form(method="POST" action="/new")
+                div.form-group
+                    label.label(for="title") Título
+                    input.form-control(type="text" name="title" id="title")
+                div.form-group
+                    label.label(for="description") Descripción
+                    textarea.form-control(type="text" rows="3" name="description" id="description")
+                div.form.group
+                button.btn.btn-dark(type="submit") Crear

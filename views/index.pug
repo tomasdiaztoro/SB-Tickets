@@ -1,0 +1,23 @@
+extends ./layout.pug
+block content
+    h2 Tickets
+    hr
+    table.table.table-hover
+        thead.thead-dark
+            tr
+                th ID
+                th Título
+                th Acciones
+            tr
+        tbody
+        each ticket in tickets
+            tr
+                td #{ticket._id}
+                td #{ticket.title}
+                td
+                    a(href="/view/"+ticket._id)
+                        |#[span.oi.oi-magnifying-glass(title="Ver" aria-hidden="true")] 
+                    a(href="/edit/"+ticket._id)
+                        |#[span.oi.oi-pencil(title="Editar" aria-hidden="true")] 
+                    a(href="/delete/"+ticket._id)
+                        |#[span.oi.oi-x(title="Eliminar" aria-hidden="true")] 

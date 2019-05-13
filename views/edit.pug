@@ -1,0 +1,17 @@
+extends ./layout.pug
+block content
+    h2 Editar ticket ##{ticket._id}
+    hr
+    div.row
+        div.col-6
+            form(method="POST" action="/edit")
+                input(type="hidden" name="id" value=""+ticket._id)
+                div.form-group
+                    label.label(for="title") Título
+                    input.form-control(type="text" name="title" id="title" value=""+ticket.title)
+                div.form-group
+                    label.label(for="description") Descripción
+                    textarea.form-control(type="text" rows="3" name="description" id="description")
+                        |#{ticket.description}
+                div.form.group
+                button.btn.btn-dark(type="submit") Editar

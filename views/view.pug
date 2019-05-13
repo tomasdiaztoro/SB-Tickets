@@ -1,0 +1,8 @@
+extends ./layout.pug
+block content
+    h2 Ticket ##{ticket._id}
+    hr
+    div.row
+        div.col-6
+            h4=ticket.title
+            p=ticket.description
